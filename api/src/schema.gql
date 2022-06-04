@@ -1,0 +1,56 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input ActivateUserInput {
+  activationKey: String!
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  activate(input: ActivateUserInput!): Tokens
+  login(input: LoginInput!): Tokens
+  register(input: RegistrationUserInput!): UserModel
+  updateUser(input: UpdateUserInput!): UserModel
+}
+
+type Query {
+  getUser(id: String!): UserModel!
+}
+
+input RegistrationUserInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+  password: String!
+}
+
+type Tokens {
+  accessToken: String
+  refreshToken: String
+}
+
+input UpdateUserInput {
+  email: String
+  firstName: String
+  lastName: String
+}
+
+type UserModel {
+  activationKey: String
+  createdAt: Date!
+  email: String!
+  firstName: String
+  id: String!
+  isActive: Boolean
+  lastName: String
+  refreshToken: String
+  updatedAt: Date!
+}
