@@ -9,70 +9,30 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 
+import articol1 from '../../shared/static/images/articol1.png'
+import articol2 from '../../shared/static/images/articol2.png'
+import articol3 from '../../shared/static/images/articol3.png'
+import jkaKarate from '../../shared/static/images/jkaKarate.png'
+
 const mock = [
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img21.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/airbnb-original.svg',
-    description:
-      'Unforgettable trips start with Airbnb. Find adventures nearby or in faraway places and access unique homes, experiences, and places around the world.',
+    media: articol1,
+    companyLogo: jkaKarate,
+    description: 'Rezultatele Campionatului JKA Romania&Cupa Memorial Ovidiu Cociorva 2022',
   },
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img22.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/amazon-original.svg',
+    media: articol2,
+    companyLogo: jkaKarate,
     description:
-      'Free delivery on millions of items with Prime. Low prices across earth\'s biggest selection of books, music, DVDs, electronics, computers, software',
+      'JKA ROMANIA SEMINAR 26 FEBRUARIE 2022',
   },
   {
-    media: 'https://assets.maccarianagency.com/backgrounds/img24.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/fitbit-original.svg',
+    media: articol3,
+    companyLogo: jkaKarate,
     description:
-      'Find your fit with Fitbit\'s family of fitness products that help you stay motivated and improve your health by tracking your activity, exercise, food, weight and sleep.',
+      'Semimnarul Online cu Shiina Sensei&Naka Sensei, 29-30 Ianuarie 2022',
   },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img25.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/google-original.svg',
-    description:
-      'Search the world\'s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\'re looking for.',
-  },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img1.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/hubspot-original.svg',
-    description:
-      'HubSpot offers a full platform of marketing, sales, customer service, and CRM software — plus the methodology, resources, and support — to help businesses.',
-  },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img3.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/mapbox-original.svg',
-    description:
-      'Integrate custom live maps, location search, and turn-by-turn navigation into any mobile or web app with Mapbox APIs & SDKs. Get started for free.',
-  },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img21.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/netflix-original.svg',
-    description:
-      'Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.',
-  },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img22.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/paypal-original.svg',
-    description:
-      'PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account.',
-  },
-  {
-    media: 'https://assets.maccarianagency.com/backgrounds/img24.jpg',
-    companyLogo:
-      'https://assets.maccarianagency.com/svg/logos/slack-original.svg',
-    description:
-      'Slack is a new way to communicate with your team. It\'s faster, better organized, and more secure than email.',
-  },
+
 ];
 
 const Stories = (): JSX.Element => {
@@ -88,10 +48,10 @@ const Stories = (): JSX.Element => {
             fontWeight: 'medium',
           }}
           gutterBottom
-          color={'secondary'}
+          color={'error'}
           align={'center'}
         >
-          Success stories
+          Articole
         </Typography>
         <Box
           component={Typography}
@@ -99,9 +59,9 @@ const Stories = (): JSX.Element => {
           variant={'h3'}
           align={'center'}
         >
-          See how we are helping teams
+          Vedeti detalii si rezultatele
           <br />
-          and businesses
+          clubului nostru
         </Box>
       </Box>
       <Grid container spacing={4}>
@@ -160,6 +120,7 @@ const Stories = (): JSX.Element => {
                 <Box component={CardActions} justifyContent={'flex-start'}>
                   <Button
                     size="large"
+                    color="error"
                     endIcon={
                       <svg
                         width={16}
@@ -178,7 +139,7 @@ const Stories = (): JSX.Element => {
                       </svg>
                     }
                   >
-                    Learn more
+                    Citeste
                   </Button>
                 </Box>
               </Box>

@@ -8,6 +8,8 @@ import Main from '../layouts/Main';
 import Container from '../components/Container';
 import ContactForm from '../components/ContactForm';
 
+import sideBanner from '../../shared/static/images/SideBanner.png'
+
 const Contact = (): JSX.Element => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -38,7 +40,8 @@ const Contact = (): JSX.Element => {
           component={LazyLoadImage}
           height={1}
           width={1}
-          src={'https://assets.maccarianagency.com/backgrounds/img23.jpg'}
+          src={
+            sideBanner}
           alt="..."
           effect="blur"
           sx={{

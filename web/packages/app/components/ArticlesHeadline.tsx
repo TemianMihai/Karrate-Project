@@ -8,10 +8,10 @@ const ArticlesHeadline = (): JSX.Element => {
     <Box>
       <Box>
         <Typography variant="h3" gutterBottom>
-          You're in good company.
+         Bine ati venit!
         </Typography>
-        <Typography variant="h3" color={'primary'} fontWeight={700}>
-          Join millions of businesses today.
+        <Typography variant="h3" color={'error'} fontWeight={700}>
+         Aici puteti gasi diferite article despre clubul nostru.
         </Typography>
       </Box>
     </Box>

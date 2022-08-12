@@ -14,24 +14,24 @@ const validationSchema = yup.object({
   firstName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
+    .min(2, 'Va rugam sa introduceti un nume valid')
+    .max(50, 'Va rugam sa introduceti un nume valid')
+    .required('Va rugam sa introduceti prenumele'),
   lastName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your last name'),
+    .min(2, 'Va rugam sa introduceti un nume valid')
+    .max(50, 'Va rugam sa introduceti un nume valid')
+    .required('Va rugam sa introduceti numele de familie'),
   email: yup
     .string()
     .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
+    .email('Va rugam sa introduceti o adresa de email valida')
+    .required('Introduceti Email.'),
   message: yup
     .string()
     .trim()
-    .required('Please specify your message'),
+    .required('Introduceti mesajul'),
 });
 
 const ContactForm = (): JSX.Element => {
@@ -63,12 +63,10 @@ const ContactForm = (): JSX.Element => {
           align={'center'}
           gutterBottom
         >
-          Contact us
+          Contactati-ne
         </Typography>
-        <Typography color="text.secondary" align={'center'}>
-          Rather than worrying about switching offices every couple years, you
-          can instead stay in the same location and grow-up from your shared
-          coworking space to an office that takes up an entire floor.
+        <Typography color="error" align={'center'}>
+         Ne puteti lasa un mesaj cu privire la orice nelamurire pe care o aveti.
         </Typography>
       </Box>
       <Box>
@@ -77,9 +75,9 @@ const ContactForm = (): JSX.Element => {
             <Grid item xs={12} sm={6}>
               <TextField
                 sx={{ height: 54 }}
-                label="First name"
+                label="Prenume"
                 variant="outlined"
-                color="primary"
+                color="error"
                 size="medium"
                 name="firstName"
                 fullWidth
@@ -94,9 +92,9 @@ const ContactForm = (): JSX.Element => {
             <Grid item xs={12} sm={6}>
               <TextField
                 sx={{ height: 54 }}
-                label="Last name"
+                label="Nume"
                 variant="outlined"
-                color="primary"
+                color="error"
                 size="medium"
                 name="lastName"
                 fullWidth
@@ -114,7 +112,7 @@ const ContactForm = (): JSX.Element => {
                 label="Email"
                 type="email"
                 variant="outlined"
-                color="primary"
+                color="error"
                 size="medium"
                 name="email"
                 fullWidth
@@ -126,11 +124,11 @@ const ContactForm = (): JSX.Element => {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                label="Message"
+                label="Mesaj"
                 multiline
                 rows={6}
                 variant="outlined"
-                color="primary"
+                color="error"
                 size="medium"
                 name="message"
                 fullWidth
@@ -144,16 +142,17 @@ const ContactForm = (): JSX.Element => {
               <Button
                 sx={{ height: 54, minWidth: 150 }}
                 variant="contained"
-                color="primary"
+                color="error"
                 size="medium"
                 type="submit"
+
               >
-                Submit
+                Trimiteti
               </Button>
             </Grid>
             <Grid item container justifyContent={'center'} xs={12}>
-              <Typography color="text.secondary">
-                We'll get back to you in 1-2 business days.
+              <Typography color="error">
+                Vom reveni cu un raspuns in cel mai scurt timp posibil.
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -162,7 +161,7 @@ const ContactForm = (): JSX.Element => {
             <Grid item container justifyContent={'center'} xs={12}>
               <Box>
                 <Typography component="p" variant="body2" align="left">
-                  By clicking on "submit" you agree to our{' '}
+                  Apasand "trimiteti" sunteti de acord cu{' '}
                   <Box
                     component="a"
                     href=""

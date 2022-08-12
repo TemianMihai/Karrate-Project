@@ -153,7 +153,7 @@ const EventsCards = (): JSX.Element => {
                         </Box>
                       }
                     >
-                      Learn more
+                      Inscrie-te
                     </Button>
                   </CardActions>
                 </CardContent>
