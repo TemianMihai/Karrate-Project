@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Link from "@mui/material/Link";
 
 const Application = (): JSX.Element => {
   return (
@@ -28,9 +29,11 @@ const Application = (): JSX.Element => {
         flexDirection={{ xs: 'column', sm: 'row' }}
       >
         <Box display="flex" marginTop={{ xs: 2, md: 0 }}>
-          <Button variant="contained" color="error" size="large">
-            Vizitati
-          </Button>
+            <Link target="_blank" href="http://www.jkaromania.com" style={{textDecoration: 'none'}}>
+              <Button variant="contained" color="error" size="large">
+                Vizitati
+              </Button>
+            </Link>
         </Box>
       </Box>
     </Box>

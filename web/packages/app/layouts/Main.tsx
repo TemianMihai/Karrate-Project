@@ -7,7 +7,6 @@ import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from '../components/Container';
-import TopNav from '../components/TopNav';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
@@ -58,7 +57,6 @@ const Main = ({
           marginLeft:-1
         }}
         elevation={trigger ? 1 : 0}
-        style={{width: "110%"}}
       >
         <Container paddingY={1}>
           <Topbar

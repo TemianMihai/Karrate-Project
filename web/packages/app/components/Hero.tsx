@@ -1,12 +1,12 @@
 import React from 'react';
-import Slider from 'react-slick';
+import Link from "@mui/material/Link";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 import Container from '../components/Container';
 
@@ -62,14 +62,16 @@ const Hero = (): JSX.Element => {
         </Button>
 
           <Box marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }}>
-            <Button
-              variant="outlined"
-              color="error"
-              size="large"
-              fullWidth={isMd ? false : true}
-            >
-              Cauta evenimente
-            </Button>
+            <Link href='/evenimente' style={{textDecoration: 'none'}}>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="large"
+                  fullWidth={isMd ? false : true}
+                >
+                  Cauta evenimente
+                </Button>
+            </Link>
           </Box>
       </Box>
     </Box>

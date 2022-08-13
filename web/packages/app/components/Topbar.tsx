@@ -40,7 +40,7 @@ const Topbar = ({
       <Box
         display={'flex'}
         component="a"
-        href="/home"
+        href="/"
         title="theFront"
         width={{ xs: 100, md: 120 }}
       >
@@ -54,6 +54,7 @@ const Topbar = ({
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box marginLeft={4}>
           <NavItem
+            link={'/'}
             title={'Acasa'}
             id={'landing-pages'}
             items={landingPages}
@@ -62,6 +63,7 @@ const Topbar = ({
         </Box>
         <Box marginLeft={4}>
           <NavItem
+            link={'/articole'}
             title={'Articole'}
             id={'landing-pages'}
             items={landingPages}
@@ -70,6 +72,7 @@ const Topbar = ({
         </Box>
         <Box marginLeft={4}>
           <NavItem
+            link={'/evenimente'}
             title={'Evenimente'}
             id={'landing-pages'}
             items={landingPages}
@@ -78,6 +81,7 @@ const Topbar = ({
         </Box>
         <Box marginLeft={4}>
           <NavItem
+            link={'/contact'}
             title={'Contact'}
             id={'landing-pages'}
             items={landingPages}
@@ -86,6 +90,7 @@ const Topbar = ({
         </Box>
         <Box marginLeft={4}>
           <NavItem
+            link={'/despre-noi'}
             title={'Despre noi'}
             id={'landing-pages'}
             items={landingPages}

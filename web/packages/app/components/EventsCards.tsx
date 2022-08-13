@@ -9,6 +9,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Link from "@mui/material/Link";
 
 import event1 from '@karrate/shared/static/images/event1.png'
 import event2 from '@karrate/shared/static/images/event2.png'
@@ -21,18 +22,21 @@ const mock = [
     title: '2nd JKA Gasshuku Ueda Daisuke',
     time: '2:00 PM - 5:00 PM',
     location: 'Scoala Generala Giroc and Sala Sport Sannicolau, Timisoara and Sannicolau Mare, Romania',
+    id: '2'
   },
   {
     media: event1,
     title: 'Gasshuku Spring Camp',
     time: '27.07.22 - 29.07.22',
     location: 'Calea Araddului nr. 17, Timisoara, Romania',
+    id: '1'
   },
   {
     media: event3,
     title: 'Tabara de Vara',
     time: '12.08.22 -  19.08.22',
     location: 'Cabana Ionut, Retezat, Romania',
+    id: '3'
   },
 ];
 
@@ -132,29 +136,31 @@ const EventsCards = (): JSX.Element => {
                     </Typography>
                   </Box>
                   <CardActions sx={{ justifyContent: 'flex-end' }}>
-                    <Button
-                      color="error"
-                      endIcon={
-                        <Box
-                          component={'svg'}
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          width={24}
-                          height={24}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </Box>
-                      }
-                    >
-                      Inscrie-te
-                    </Button>
+                    <Link href={`evenimente/${item.id}`} style={{textDecoration: 'none'}}>
+                      <Button
+                        color="error"
+                        endIcon={
+                          <Box
+                            component={'svg'}
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            width={24}
+                            height={24}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            />
+                          </Box>
+                        }
+                      >
+                        Inscrie-te
+                      </Button>
+                    </Link>
                   </CardActions>
                 </CardContent>
               </Box>

@@ -10,7 +10,9 @@ const LogoutPage = lazy(() => import('../pages/LogoutPage'))
 const AboutUs = lazy(() => import('../pages/AboutUs'))
 const Contact = lazy(() => import('../pages/Contact'))
 const Articles = lazy(() => import('../pages/Articles'))
+const Article = lazy(() => import('../pages/Article'))
 const Events = lazy(() => import('../pages/Events'))
+const EventPage = lazy(() => import('../pages/EventPage'))
 const AuthLayout = lazy(() => import('../layouts/AuthLayout'))
 
 const Router: React.FC = () => {
@@ -27,33 +29,40 @@ const Router: React.FC = () => {
             <AuthLayout />
           </Suspense>
         </Route>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Suspense fallback={<Loader />}>
             <HomePage />
           </Suspense>
         </Route>
-        <Route exact path="/about-us">
+        <Route exact path="/despre-noi">
           <Suspense fallback={<Loader />}>
             <AboutUs />
           </Suspense>
         </Route>
-        <Route exact path="/articles">
+        <Route exact path="/articole">
           <Suspense fallback={<Loader />}>
             <Articles />
           </Suspense>
         </Route>
-        <Route exact path="/events">
+        <Route exact path="/articole/:articleId">
+          <Suspense fallback={<Loader />}>
+            <Article />
+          </Suspense>
+         </Route>
+        <Route exact path="/evenimente">
           <Suspense fallback={<Loader />}>
             <Events />
           </Suspense>
         </Route>
+        <Route exact path="/evenimente/:eventId">
+          <Suspense fallback={<Loader />}>
+            <EventPage />
+          </Suspense>
+         </Route>
         <Route exact path="/contact">
           <Suspense fallback={<Loader />}>
             <Contact />
           </Suspense>
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
         </Route>
       </Switch>
     </BrowserRouter>

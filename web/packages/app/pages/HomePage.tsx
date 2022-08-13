@@ -27,74 +27,74 @@ const Coworking = (): JSX.Element => {
     <Main>
       <Hero />
       <Box bgcolor={theme.palette.grey["100"]}>
-        <Container>
-          <Advantages />
-        </Container>
+          <Container>
+            <Box marginBottom={4}>
+                <Typography
+                  sx={{
+                    textTransform: 'uppercase',
+                    fontWeight: 'medium',
+                  }}
+                  gutterBottom
+                  color={'error'}
+                  align={'center'}
+                >
+                  Evenimente
+                </Typography>
+                <Typography
+                  variant="h4"
+                  align={'center'}
+                  data-aos={'fade-up'}
+                  gutterBottom
+                  sx={{
+                    fontWeight: 700,
+                  }}
+                >
+                  Evenimentele clubului nostru
+                </Typography>
+                <Typography
+                  variant="h6"
+                  align={'center'}
+                  color={'text.secondary'}
+                  data-aos={'fade-up'}
+                >
+                  Evenimentele noastre sunt dedicate practicantilor de karate
+                  <br />
+                  care doresc sa se antreneze cu un grup mare si profesionist de sportivi.
+                </Typography>
+            </Box>
+            <EventsCards />
+            <Grid item xs={12}>
+              <Box
+                display="flex"
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+                justifyContent={'center'}
+                marginTop={2}
+              >
+                <Button
+                  variant="contained"
+                  color="error"
+                  size="large"
+                  fullWidth={isMd ? false : true}
+                >
+                  Inscrie-te la evenimente
+                </Button>
+               <Box marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }}>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="large"
+                  fullWidth={isMd ? false : true}
+                >
+                  Detalii
+                </Button>
+              </Box>
+              </Box>
+            </Grid>
+          </Container>
       </Box>
       <Container>
-        <Box marginBottom={4}>
-            <Typography
-              sx={{
-                textTransform: 'uppercase',
-                fontWeight: 'medium',
-              }}
-              gutterBottom
-              color={'error'}
-              align={'center'}
-            >
-              Evenimente
-            </Typography>
-            <Typography
-              variant="h4"
-              align={'center'}
-              data-aos={'fade-up'}
-              gutterBottom
-              sx={{
-                fontWeight: 700,
-              }}
-            >
-              Evenimentele clubului nostru
-            </Typography>
-            <Typography
-              variant="h6"
-              align={'center'}
-              color={'text.secondary'}
-              data-aos={'fade-up'}
-            >
-              Evenimentele noastre sunt dedicate practicantilor de karate
-              <br />
-              care doresc sa se antreneze cu un grup mare si profesionist de sportivi.
-            </Typography>
-        </Box>
-        <EventsCards />
-        <Grid item xs={12}>
-          <Box
-            display="flex"
-            flexDirection={{ xs: 'column', sm: 'row' }}
-            alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-            justifyContent={'center'}
-            marginTop={2}
-          >
-            <Button
-              variant="contained"
-              color="error"
-              size="large"
-              fullWidth={isMd ? false : true}
-            >
-              Inscrie-te la evenimente
-            </Button>
-           <Box marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }}>
-            <Button
-              variant="outlined"
-              color="error"
-              size="large"
-              fullWidth={isMd ? false : true}
-            >
-              Detalii
-            </Button>
-          </Box>
-          </Box>
-        </Grid>
+        <Advantages />
       </Container>
       <Box bgcolor={theme.palette.grey["100"]}>
         <MapHero />
