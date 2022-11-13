@@ -154,7 +154,7 @@ const EventPage = (): JSX.Element => {
                   <Box component={Card}>
                     <CardContent>
                       <Typography variant="h6" gutterBottom color="text.primary">
-                        Interactive decision support system
+                        Inscrie-te la acest eveniment
                       </Typography>
                       <Button
                         variant="contained"
@@ -179,7 +179,7 @@ const EventPage = (): JSX.Element => {
                           </Box>
                         }
                       >
-                        View all
+                        Continua
                       </Button>
                     </CardContent>
                   </Box>

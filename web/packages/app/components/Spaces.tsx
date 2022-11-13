@@ -10,6 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Link from "@mui/material/Link";
 import { useTheme } from '@mui/material/styles';
 
 import articol1 from '../../shared/static/images/articol1.png'
@@ -24,6 +25,7 @@ const mock = [
     ],
     title: '2022 Campionatul JKA Romania&Cupa Memorial Ovidiu Cociorva',
     subtitle: 'Scris de Zoltan Nagy Sensei',
+    link: "/articole/1"
   },
   {
     media: [
@@ -31,6 +33,7 @@ const mock = [
     ],
     title: 'JKA ROMANIA SEMINAR 26 FEBRUARIE 2022',
     subtitle: 'Scris de Zoltan Nagy Sensei',
+    link: "/articole/2"
   },
   {
     media: [
@@ -38,6 +41,7 @@ const mock = [
     ],
     title: '29-30 Ianuarie 2022-Online Seminar Shiina Sensei&Naka Sensei',
     subtitle: 'Scris de Zoltan Nagy Sensei',
+    link: "/articole/3"
   },
 ];
 
@@ -103,6 +107,9 @@ const Spaces = (): JSX.Element => {
             data-aos-duration={600}
           >
             <Box
+              component={'a'}
+              href={item.link}
+              style={{textDecoration: 'none'}}
               display={'block'}
               width={1}
               height={1}
@@ -201,7 +208,9 @@ const Spaces = (): JSX.Element => {
                 </CardContent>
                 <Box flexGrow={1} />
                 <CardActions sx={{ justifyContent: 'flex-end' }}>
-                  <Button color="error">Citeste</Button>
+                  <Link href={item.link} style={{textDecoration: 'none'}}>
+                    <Button color="error">Citeste</Button>
+                  </Link>
                 </CardActions>
               </Box>
             </Box>

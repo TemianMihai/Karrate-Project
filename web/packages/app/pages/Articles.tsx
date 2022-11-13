@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Typography from "@mui/material/Typography";
 
 import Main from '../layouts/Main';
 import Container from '../components/Container';
-import ArticlesHeadline from '../components/ArticlesHeadline';
 import ArticlesCards from '../components/ArticlesCards';
+import ArticlesHero from "../components/ArticlesHero";
 
 const Articles = (): JSX.Element => {
   const theme = useTheme();
@@ -20,28 +21,17 @@ const Articles = (): JSX.Element => {
             paddingTop: 13,
           }}
         >
-          <Container zIndex={3} position={'relative'}>
-            <Container marginLeft={'0 !important'}>
-              <ArticlesHeadline />
-            </Container>
-          </Container>
-          <Box
-            component={'svg'}
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            viewBox="0 0 1920 100.1"
-            width={1}
-            marginBottom={-1}
-            position={'relative'}
-            zIndex={2}
-          >
-            <path
-              fill={theme.palette.background.paper}
-              d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-            ></path>
-          </Box>
+          <ArticlesHero />
+        </Box>
+        <Box marginTop={4}>
+            <Box
+            >
+              <Typography fontWeight={700} variant={'h3'} align={'center'} color={'error'}>
+                Vedeti detalii si rezultatele
+                <br />
+                clubului nostru
+              </Typography>
+            </Box>
         </Box>
         <Container>
           <ArticlesCards />

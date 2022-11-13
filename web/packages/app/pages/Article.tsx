@@ -35,45 +35,6 @@ const Article = (): JSX.Element => {
             </Grid>
           </Grid>
         </Container>
-        <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 100.1"
-          sx={{
-            marginBottom: -1,
-            width: 1,
-          }}
-        >
-          <path
-            fill={'gray'}
-            d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-          ></path>
-        </Box>
-      </Box>
-      <Box>
-        <Container>
-          <SimilarStoriesArticle />
-        </Container>
-        <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 100.1"
-          sx={{
-            marginBottom: -1,
-            width: 1,
-          }}
-        >
-          <path
-            fill={theme.palette.background.paper}
-            d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-          ></path>
-        </Box>
       </Box>
     </Main>
   );

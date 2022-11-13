@@ -15,13 +15,13 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 const Coworking = (): JSX.Element => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-  console.log(theme)
 
   return (
     <Main>
@@ -71,24 +71,16 @@ const Coworking = (): JSX.Element => {
                 justifyContent={'center'}
                 marginTop={2}
               >
-                <Button
+                <Link href="/evenimente" style={{textDecoration: 'none'}}>
+                 <Button
                   variant="contained"
                   color="error"
                   size="large"
                   fullWidth={isMd ? false : true}
-                >
+                  >
                   Inscrie-te la evenimente
-                </Button>
-               <Box marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }}>
-                <Button
-                  variant="outlined"
-                  color="error"
-                  size="large"
-                  fullWidth={isMd ? false : true}
-                >
-                  Detalii
-                </Button>
-              </Box>
+                 </Button>
+                </Link>
               </Box>
             </Grid>
           </Container>

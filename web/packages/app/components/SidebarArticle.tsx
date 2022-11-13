@@ -8,47 +8,45 @@ import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Link from "@mui/material/Link";
+
+import articol2 from "@karrate/shared/static/images/articol2.png";
 
 const mock = [
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img13.jpg',
+    {
+    image: articol2,
+    title: 'Rezultatele Campionatului JKA Romania',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    title: 'Lorem ipsum dolor sit amet',
     author: {
-      name: 'Clara Bertoletti',
+      name: 'Zoltan Nagy',
     },
     date: '04 Aug',
+    link: "/articole/1"
   },
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img14.jpg',
+    image: articol2,
+    title:
+      'JKA ROMANIA SEMINAR 26 FEBRUARIE 2022',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    title: 'Consectetur adipiscing elit',
     author: {
-      name: 'Jhon Anderson',
-    },
-    date: '12 Sep',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img15.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    title: 'Lorem ipsum dolor sit amet',
-    author: {
-      name: 'Clara Bertoletti',
+      name: 'Zoltan Nagy',
     },
     date: '04 Aug',
+    link: "/articole/2"
   },
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img16.jpg',
+    image: articol2,
+    title:
+      'Semimnarul Online cu Shiina Sensei&Naka Sensei',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    title: 'Consectetur adipiscing elit',
     author: {
-      name: 'Jhon Anderson',
+      name: 'Zoltan Nagy',
     },
-    date: '12 Sep',
+    date: '04 Aug',
+    link: "/articole/3"
   },
 ];
 
@@ -64,7 +62,7 @@ const SidebarArticle = (): JSX.Element => {
           marginBottom: 2,
         }}
       >
-        Upcoming updates
+        Alte articole
       </Typography>
       <Grid container spacing={2}>
         {mock.map((item, i) => (
@@ -118,7 +116,9 @@ const SidebarArticle = (): JSX.Element => {
                     {item.author.name} - {item.date}
                   </Typography>
                 </Box>
-                <Button size={'small'}>Read More</Button>
+                <Link href={item.link} style={{textDecoration: 'none'}}>
+                    <Button size={'small'} color={'error'}>Citeste mai mult</Button>
+                </Link>
               </CardContent>
             </Box>
           </Grid>

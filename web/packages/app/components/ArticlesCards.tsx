@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
+import Link from "@mui/material/Link";
 
 import articol1 from '../../shared/static/images/articol1.png'
 import articol2 from '../../shared/static/images/articol2.png'
@@ -19,57 +20,37 @@ const mock = [
     media: articol1,
     companyLogo: jkaKarate,
     description: 'Rezultatele Campionatului JKA Romania&Cupa Memorial Ovidiu Cociorva 2022',
+    link: "/articole/1"
   },
   {
     media: articol2,
     companyLogo: jkaKarate,
     description:
       'JKA ROMANIA SEMINAR 26 FEBRUARIE 2022',
+    link: "/articole/2"
   },
   {
     media: articol3,
     companyLogo: jkaKarate,
     description:
       'Semimnarul Online cu Shiina Sensei&Naka Sensei, 29-30 Ianuarie 2022',
+    link: "/articole/3"
   },
 
 ];
 
-const Stories = (): JSX.Element => {
+const ArticlesCards = (): JSX.Element => {
   const theme = useTheme();
   const { mode } = theme.palette;
 
   return (
     <Box>
-      <Box marginBottom={4}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'error'}
-          align={'center'}
-        >
-          Articole
-        </Typography>
-        <Box
-          component={Typography}
-          fontWeight={700}
-          variant={'h3'}
-          align={'center'}
-        >
-          Vedeti detalii si rezultatele
-          <br />
-          clubului nostru
-        </Box>
-      </Box>
       <Grid container spacing={4}>
         {mock.map((item, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
             <Box
               component={'a'}
-              href={''}
+              href={item.link}
               display={'block'}
               width={1}
               height={1}
@@ -118,29 +99,31 @@ const Stories = (): JSX.Element => {
                 </Box>
                 <Box flexGrow={1} />
                 <Box component={CardActions} justifyContent={'flex-start'}>
-                  <Button
-                    size="large"
-                    color="error"
-                    endIcon={
-                      <svg
-                        width={16}
-                        height={16}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    }
-                  >
-                    Citeste
-                  </Button>
+                  <Link href={item.link} style={{textDecoration: 'none'}}>
+                    <Button
+                      size="large"
+                      color="error"
+                      endIcon={
+                        <svg
+                          width={16}
+                          height={16}
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      }
+                    >
+                      Citeste
+                    </Button>
+                  </Link>
                 </Box>
               </Box>
             </Box>
@@ -151,4 +134,4 @@ const Stories = (): JSX.Element => {
   );
 };
 
-export default Stories;
+export default ArticlesCards;
