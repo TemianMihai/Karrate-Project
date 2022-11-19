@@ -9,7 +9,7 @@ import EventsHero from "../components/EventsHero";
 
 const Events = (): JSX.Element => {
   return (
-    <Main>
+    <Main colorInvert={true}>
       <Box>
         <Box
           position={'relative'}

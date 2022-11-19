@@ -11,7 +11,7 @@ import ArticlesHero from "../components/ArticlesHero";
 const Articles = (): JSX.Element => {
   const theme = useTheme();
   return (
-    <Main>
+    <Main colorInvert={true}>
       <Box>
         <Box
           position={'relative'}

@@ -47,8 +47,8 @@ const Topbar = ({
         <Box
           component={'img'}
           src={jkaKarate}
-          height={1}
-          width={1}
+          height={0.6}
+          width={0.6}
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>

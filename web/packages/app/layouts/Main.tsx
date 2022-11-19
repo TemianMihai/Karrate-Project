@@ -11,8 +11,6 @@ import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 
-
-
 interface Props {
   children: React.ReactNode;
   colorInvert?: boolean;
@@ -53,12 +51,10 @@ const Main = ({
         sx={{
           top: 0,
           backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
-          marginBottom: 2,
-          marginLeft:-1
         }}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={1}>
+        <Container paddingY={2}>
           <Topbar
             onSidebarOpen={handleSidebarOpen}
             pages={{}}
