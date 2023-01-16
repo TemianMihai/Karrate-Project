@@ -18,6 +18,7 @@ import IconButton from '@mui/material/IconButton';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import event1 from '@karrate/shared/static/images/sensei1.png'
 
 const ContentArticle = (): JSX.Element => {
   const theme = useTheme();
@@ -182,11 +183,11 @@ const ContentArticle = (): JSX.Element => {
         <Box display={'flex'} alignItems={'center'}>
           <Avatar
             sx={{ width: 50, height: 50, marginRight: 2 }}
-            src={'https://assets.maccarianagency.com/avatars/img3.jpg'}
+            src={event1}
           />
           <Box>
-            <Typography fontWeight={600}>Jhon Anderson</Typography>
-            <Typography color={'text.secondary'}>May 19, 2021</Typography>
+            <Typography fontWeight={600}>Zoltan Nagy</Typography>
+            <Typography color={'text.secondary'}>January 2, 2023</Typography>
           </Box>
         </Box>
         <Box display={'flex'} alignItems={'center'}>

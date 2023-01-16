@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 
 import Container from '../components/Container';
-
+import event1 from '@karrate/shared/static/images/sensei1.png'
 const HeroArticle = (): JSX.Element => {
   return (
     <Box
@@ -53,12 +53,12 @@ const HeroArticle = (): JSX.Element => {
           <Box display={'flex'} alignItems={'center'}>
             <Avatar
               sx={{ width: 60, height: 60, marginRight: 2 }}
-              src={'https://assets.maccarianagency.com/avatars/img3.jpg'}
+              src={event1}
             />
             <ListItemText
               sx={{ margin: 0 }}
-              primary={'Jhon Anderson'}
-              secondary={'May 19, 2021'}
+              primary={'Zoltan Nagy'}
+              secondary={'January 2, 2023'}
               primaryTypographyProps={{
                 variant: 'h6',
                 sx: { color: 'common.white' },

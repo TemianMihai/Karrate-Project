@@ -18,7 +18,7 @@ import  sensei3 from '../../shared/static/images/sensei3.png'
 const mock = [
   {
     feedback:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Aici putem scrie 2-3 cuvinte despre fiecare sensei in parte.',
     name: 'ZOLTAN NAGY',
     title: 'Presedinte',
     avatar: sensei1
@@ -63,7 +63,7 @@ const Reviews = (): JSX.Element => {
           color={'text.secondary'}
           data-aos={'fade-up'}
         >
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Aici puteti gasii cateva cuvinte despre Senseii din dojo-urile noastre
         </Typography>
       </Box>
       <Grid container spacing={2}>
